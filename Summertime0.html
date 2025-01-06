@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Летнее время List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://99px.ru/sstorage/53/2022/05/tmb_341763_215018.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            padding-top: 20px;
+        }
+
+        header {
+            width: 100%;
+            background-color: rgba(98, 0, 234, 0.8);
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+        .info-panel {
+            margin-top: 20px;
+            width: 90%;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            color: #ffcc00;
+        }
+
+        .main-poster {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .episode-buttons {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .episode-buttons button {
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #38ff22, #3806ff);
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 120px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .episode-buttons button:hover {
+            background: linear-gradient(45deg, #9fffb9, #8a99f7);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>Летнее время все серии</header>
+    <!-- Main Poster -->
+    <img src="https://dere.shikimori.one/uploads/poster/animes/47194/main_2x-8171f7e7450827e208c024e18d5e8b4f.webp" alt="Osnof Poster" class="main-poster">
+
+    <!-- Episode Buttons -->
+    <div class="episode-buttons">
+        <!-- Generate buttons for 25 episodes -->
+        <script>
+            const buttonsContainer = document.querySelector('.episode-buttons');
+            for (let i = 1; i <= 25; i++) {
+                const buttonElement = document.createElement('a');
+                buttonElement.href = `Summertime${i}.html`;
+                buttonElement.innerHTML = `<button>Episode ${i}</button>`;
+                buttonsContainer.appendChild(buttonElement);
+            }
+        </script>
+    </div>
+    <!-- Info Panel -->
+    <div class="info-panel">
+        <h2>О Летнее время</h2>
+        <p>Жанры: мистика и детектив.</p>
+        <p>Тема: сёнен.</p>
+        <p>Год выпуска: 2022.</p>
+        <p>Оригинальное название: Summertime Render</p>
+        <p>Возрастной рейтинг: 16+</p>
+        <p>
+            Шинпей возвращается к себе домой, на маленький остров Хитогошима, но, к сожалению, повод тяжело сжимает сердце. Его близкая подруга, практически родная сестра утонула, спасая маленькую девочку в водах океана. Однако, по небольшому селению начинают бродить слухи, что не все так просто как кажется, постоянно всплывает какая-либо необъяснимая информация, делаю историю все запутаннее и запутаннее. И вот сестра девушки Мио неожиданно говорит Шинпею, что знает кто убийца, и рассказывает о странном явлении – о копии сестры, словно призрак, она появилась так внезапно и также внезапно растворилась – и это был не единичный случай. Маленькая девочка, связанная с Юшио, тоже видела свою копию, а после исчезла. И тут на свет выливается старая легенда об этом острове: люди в этом месте порой страдали от теневой болезни. Они переставали видеть свою тень, и в какой-то момент тень убивала их, занимая место своих жертв, истребляя впоследствии всех жильцов дома. Эта страшная байка все больше и больше начинает походить на реальность, и ребята попадают все в более опасный сюжет, который им придется распутывать, чтобы докопаться до правды…
+
+Встретишь свою тень – умрешь. Так гласит старое поверье. Но неужто эта игра без выигрыша? Как избежать смерти? Можно ли сделать шаг назад и перезапустить время вспять?
+        </p>
+        <p>Главные герои: Синпей Адзиро, Ушио Кофуне, Хизуру Минаката, Хейн и другие.</p>
+    </div>
+</body>
+</html>

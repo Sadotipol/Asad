@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Человек-бензопила все серии</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://images2.alphacoders.com/128/1280149.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            padding-top: 20px;
+        }
+
+        header {
+            width: 100%;
+            background-color: rgba(98, 0, 234, 0.8);
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+        .info-panel {
+            margin-top: 20px;
+            width: 90%;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            color: #ffcc00;
+        }
+
+        .main-poster {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .episode-buttons {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .episode-buttons button {
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #38ff22, #3806ff);
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 120px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .episode-buttons button:hover {
+            background: linear-gradient(45deg, #9fffb9, #8a99f7);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>Человек-бензопила все серии</header>
+    <!-- Main Poster -->
+    <img src="https://photobooth.cdn.sports.ru/preset/news/2/d1/88c7eb9f649bfb6ce0a58893c102a.jpeg" alt="Osnof Poster" class="main-poster">
+
+    <!-- Episode Buttons -->
+    <div class="episode-buttons">
+        <!-- Generate buttons for 25 episodes -->
+        <script>
+            const buttonsContainer = document.querySelector('.episode-buttons');
+            for (let i = 1; i <= 12; i++) {
+                const buttonElement = document.createElement('a');
+                buttonElement.href = `Chainsaw Man${i}.html`;
+                buttonElement.innerHTML = `<button>Episode ${i}</button>`;
+                buttonsContainer.appendChild(buttonElement);
+            }
+        </script>
+    </div>
+    <!-- Info Panel -->
+    <div class="info-panel">
+        <h2>О Человек-бензопила</h2>
+        <p>Жанры: боевик и мистика.</p>
+        <p>Год выпуска: 2022.</p>
+        <p>Оригинальное название: Chainsaw Man</p>
+        <p>Возрастной рейтинг: 18+</p>
+        <p>
+            Жизнь рыжеволосого Дэндзи наполнена страданиями и невообразимыми испытаниями. Отец мальчишки был не очень хорошим человеком, а потому задолжал якудза крупную сумму. После смерти мужчины выплата долга осталась на плечах юноши. Парнишка был в отчаянии и думал, что лучше умереть, но на его пути повстречался демон, который вскоре стал лучшим и единственным другом. Дэндзи помог залечить раны демонического питомца с бензопилой на голове, а после этого назвал его Почита. Вместе новоиспечённые друзья начали зарабатывать деньги, но этого было мало, а потому подростку пришлось продать почку и глаз. Якудза требовали больше выплат, и парнишка стал убийцей демонов. Дела шли хорошо, но в один злополучный день глава якудза решил убить парня. Почита не бросил мёртвого друга, а к тому же он заключил контракт с юношей. После слияния питомца и хозяина появилась настоящая машина для убийств демонов.
+
+Кровавые сражения с использованием демонической силы можно увидеть в аниме "Chainsaw Man". Дэндзи превратился в человека-бензопилу, а также обрёл неимоверную силу. После ожесточённой схватки перед глазами окровавленного парня появился специальный отряд, который охотится на демонов. Выбор у парня был невелик, а потому он согласился на все условия и присоединился к охотникам.
+        </p>
+        <p>Главные герои: Дэнджи, Пауэр, Аки Хаякава, Макима и другие.</p>
+    </div>
+</body>
+</html>

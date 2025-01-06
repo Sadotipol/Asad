@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Человек-бензопила#1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://images.wallpapersden.com/image/download/anime-chainsaw-man-hd-denji-colourful-art_bWxqZ2mUmZqaraWkpJRmbmdlrWZlbWU.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+        }
+
+        .banner {
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px 0;
+            font-size: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #ffeb3b;
+        }
+
+        .player-container {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+        }
+
+        video {
+            width: 100%;
+            max-width: 720px;
+            border-radius: 10px;
+        }
+
+        .controls {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #6200ea;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3700b3;
+        }
+
+        .home-button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #03a9f4;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .left {
+            align-items: left;
+        }
+
+        .home-button:hover {
+            background-color: #0288d1;
+        }
+
+        .time-display {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">Человек-бензопила #1</div>
+    <div class="left">
+        <button class="home-button" onclick="goHome()">Дом</button>
+    </div>
+    
+    <div class="player-container">
+        <video id="animeVideo" controls>
+            <source src="https://r170102.yandexwebcache.org/chainsaw-man/1.1080.23c7dacc9cb0afaa.mp4?hash1=c03089d88f260b348c1b5de905f00e0c&hash2=f7e6f21c168bd986274523be22b3530e" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="controls">
+            <button onclick="nextVideo()">Следующий</button>
+            <span class="time-display" id="timeDisplay">00:00 / 00:00</span>
+        </div>
+    </div>
+    
+
+    <script>
+        const video = document.getElementById('animeVideo');
+        const timeDisplay = document.getElementById('timeDisplay');
+        const videoList = ["sample-anime.mp4", "another-anime.mp4"];
+        let currentVideoIndex = 0;
+
+        function playPause() {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        }
+
+        function stopVideo() {
+            video.pause();
+            video.currentTime = 0;
+        }
+
+        function nextVideo() {
+            window.location.href = 'Chainsaw Man2.html'; // Change this URL to your desired home page
+        }
+        function dovnVideo() {
+            window.location.href = 'Chainsaw Man1.html'; // Change this URL to your desired home page
+        }
+
+        video.addEventListener('timeupdate', () => {
+            const currentMinutes = Math.floor(video.currentTime / 60);
+            const currentSeconds = Math.floor(video.currentTime % 60);
+            const durationMinutes = Math.floor(video.duration / 60);
+            const durationSeconds = Math.floor(video.duration % 60);
+
+            timeDisplay.textContent = `${currentMinutes.toString().padStart(2, '0')}:${currentSeconds.toString().padStart(2, '0')} / ${durationMinutes.toString().padStart(2, '0')}:${durationSeconds.toString().padStart(2, '0')}`;
+        });
+
+        function goHome() {
+            window.location.href = 'Anime Player.html'; // Change this URL to your desired home page
+        }
+    </script>
+</body>
+</html>
